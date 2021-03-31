@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Quizz.js"></script>
+    <script src="game.js"></script>
+    <link rel="stylesheet" href="Quizz.css">
+</head>
+<body>
+<div id="main">
+</div>
+<script>
+    let game = new Game()
+    let quiz1 = new Quizz('How to say iam fine in a nature way?',['I am fine','Iam fine, thanks','I am good','Never better'],'I am good')
+    let quiz2 = new Quizz('What is this word in English means? nhung nguoi ngheo',['Poor','Poor people','Cheap people','Underpriviledged'],'Underpriviledged')
+    game.addQuizz(quiz1)
+    game.addQuizz(quiz2)
+    function display(){
+        document.getElementById('main').innerHTML=game.showQuiz();
+    }
+    display()
+    function checkAnswer(answer) {
+        if (game.getCurrentQuiz().checkCorrect(answer)) {
+            alert('correct');
+            game.nextQuiz();
+            display();
+        } else {
+            alert("wrong")
+        }
+    }
+</script>
+</body>
+</html>

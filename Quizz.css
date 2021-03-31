@@ -1,0 +1,33 @@
+body{
+    background-color: darkslategray;
+}
+
+#choice-container{
+    display: flex;
+}
+
+h1{
+    flex-basis: 50px;
+   font-size: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p{
+    width: 50%;
+    border-radius: 4px;
+    background: blue;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+p:hover{
+    box-shadow: 0 0.4rem 1.4rem 0 deepskyblue;
+    transform: scale(1.02);
+}
+
+p{
+    margin-left: 300px;
+}
